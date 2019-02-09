@@ -1,0 +1,214 @@
+.l-contact-block {
+    height:100%;
+    position: relative;
+}
+
+.contact-col {
+    position:absolute;
+    left:0;top:0;
+    width:50%;
+    height:100%;
+    background-color:#111111;
+    overflow:hidden;
+}
+
+.contact-col--right {
+    left:auto;right:0;
+    background-color:#001724;
+}
+
+.contact-col_background-image {
+    object-fit:cover;
+    position:absolute;
+    height:100%;
+    width:100%;
+    transition:transform 750ms ease-out;
+    left:0;top:0;
+    opacity:0.15;
+    z-index:0;
+}
+
+.contact-col_background-image--middle {
+    opacity:0.3;
+}
+
+.contact-col_content {
+    padding:100px;
+    position: relative;
+    z-index:5;
+    box-sizing:border-box;
+}
+
+.contact-col_content_text {
+    opacity:0;
+    transform:translate3d(0, 65%, 0);
+    transition:all 750ms ease-out;
+}
+
+.l-contact-block.is-active .contact-col_content_text {
+    opacity:1;
+    transform:translate3d(0, 0, 0);
+}
+
+.contact-col_title {
+    color:#FFFFFF;
+    font-size:36px;
+    font-weight:600;
+    letter-spacing:0.5px;
+    position: relative;
+    display:inline-block;
+    margin-bottom:30px;
+    transform:translate3d(-200%, 0, 0);
+    transition:transform 750ms ease-out;
+}
+
+.l-contact-block.is-active .contact-col_title {
+    transform:translate3d(0, 0, 0);
+}
+
+.contact-col_title::after {
+    content:'';
+    position:absolute;
+    bottom:0;right:0;
+    height:2px;
+    background-color:#FFFFFF;
+    width:9999px;
+}
+
+.contact-col_description {
+    max-width:450px;
+    font-size:16px;
+    line-height:22px;
+    font-weight:400;
+    font-family:'Source Sans Pro', sans-serif;
+    letter-spacing:0.5px; 
+    color:#FFFFFF;
+}
+
+.contact-col_description a {
+    color:#FFFFFF;
+}
+
+/*
+.contact-col--right .contact-col_title, .contact-col--right .contact-col_description, .contact-col--right .p-block_features_title, .contact-col--right .p-block_feature {
+    color:#111111;
+}
+
+.contact-col--right .contact-col_title::after, .contact-col--right .p-block_feature::after {
+    background-color:#111111;
+}
+*/
+
+.contact-col_skills {
+    margin-top:30px;
+}
+
+.contact-options {
+    position:absolute;
+    left:50%;
+    bottom:100px;
+    transform:translateX(-50%);
+    text-align:center;
+}
+
+.contact-button {
+    color:#FFFFFF;
+    display:inline-block;
+    text-decoration:none;
+    position: relative;
+    transform:translate3d(0, -25%, 0);
+    opacity:0;
+    transition:all 750ms ease-out;
+}
+
+.l-contact-block.is-active .contact-button {
+    opacity:1;
+    transform:translate3d(0, 0, 0);
+}
+
+.contact-button::after {
+    content:'';
+    position:absolute;
+    width:100%;height:3px;
+    bottom:-2px;left:0;
+    background:linear-gradient(90deg, #21acfd 25%, #9b21ff 75%);
+    opacity:0.6;
+}
+
+.contact-button_text {
+    display:block;
+    font-size:26px;
+    font-weight:400;
+    letter-spacing:0.5px;
+    position: relative;
+    z-index:1;
+}
+
+.contact-options_text {
+    margin:0px 0 15px 0;
+    color:#FFFFFF;
+    font-size:14px;
+}
+
+
+@media all and (max-width:1199px) {
+    .contact-col_content {
+        padding:75px 85px 75px 30px;
+    }
+}
+
+@media all and (max-width:991px) {
+    .contact-col {
+        width:100%;
+        height:50%;
+    }
+    .contact-col--right {
+        bottom:0;top:auto;
+    }
+    .contact-col_content {
+        padding:15px 25px;
+        position:absolute;
+        width:80%;
+        top:50%;
+        left:50%;
+        transform:translate3d(-50%, -50%, 0);
+    }
+    .contact-col_title {
+        font-size:28px;
+        margin-bottom:10px;
+    }
+    .contact-col_description {
+        max-width:100%;
+        font-size:14px;
+        line-height:20px;
+        margin:0;
+    }
+    .contact-options {
+        display:none;
+    }
+    .contact-col_skills {
+        margin-top:10px;
+    }
+    .contact-col .p-block_features_title, .contact-col .p-block_feature {
+        font-size:14px;
+    }
+}
+
+@media all and (max-width:767px) {
+    .contact-col_content {
+        width:100%;
+    }
+    .contact-col_title {
+        font-size:24px;
+    }
+}
+
+@media all and (max-width:500px) {
+    .contact-col {
+        display:none;
+    }
+    .contact-col--right {
+        display:block;
+        height:100%;
+    }
+}

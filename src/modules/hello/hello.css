@@ -1,0 +1,168 @@
+.hello-block {
+    height:100%;
+    background-size:cover;
+    position: relative;
+    overflow:hidden;
+}
+
+.hello-block-outline {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:auto;
+    z-index:2;
+}
+
+.hello-gradient {
+    position: absolute;
+    height:200%;
+    width:200%;
+    top:-50%;
+    left:-50%;
+    z-index:1;
+}
+
+.hello-gradient_rotate {
+    background:linear-gradient(135deg, transparent 25%, #00649e 75%);
+    animation:spin 8s linear infinite;
+    position:absolute;
+    padding-top:100%;
+    width:100%;
+    opacity:0.3;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.hello-block-background {
+    position:absolute;
+    top:0;
+    left:0;
+    object-fit:cover;
+    height:135%;
+    width:100%;
+    transform:translate3d(0, 0, 0);
+    transition:transform 750ms ease-out;
+}
+
+.hello-block.is-active .hello-block-background {
+    transform:translate3d(0, -30%, 0);
+}
+
+.hello-text {
+    position:absolute;
+    left:350px;
+    top:25%;
+    z-index:5;
+}
+
+.hello-text_row {
+    font-size:48px;
+    font-weight:600;
+    color:#FFFFFF;
+    letter-spacing:0.5px;
+}
+
+.hello-text_row.is-active::after {
+    content:'';
+    height:42px;
+    width:5px;
+    position:relative;
+    top:5px;
+    margin-left:2px;
+    background:#FFFFFF;
+    display:inline-block;
+}
+
+.hello-text_row.is-active.is-blinking::after {
+    animation: blink 1200ms infinite;
+}
+
+.bottom-link {
+    position:absolute;
+    bottom:10px;
+    left:0;
+    width:100%;
+    z-index:5;
+    text-align:center;
+    cursor:pointer;
+}
+
+.bottom-link_text {
+    font-size:12px;
+    margin:0;
+    color:#FFFFFF;
+    font-family:'Source Sans Pro', sans-serif;
+    letter-spacing:1px;
+    opacity:0.8;
+    transition:opacity 500ms ease-out;
+}
+
+.bottom-link_image {
+    height:32px;
+    margin-top:5px;
+    opacity:0.8;
+    transform:translate3d(0, 0, 0);
+    transition:all 500ms ease-out;
+}
+
+.bottom-link:hover .bottom-link_image {
+    opacity:1;
+    transform:translate3d(0, 6px, 0);
+}
+
+.bottom-link:hover .bottom-link_text {
+    opacity:1;
+}
+
+@keyframes blink {
+	from, 50% {
+		opacity:1;
+	}
+
+	50.0001%, to {
+		opacity:0;
+	}
+}
+
+@media all and (max-width:1199px) {
+    .hello-text {
+        left:150px;
+    }
+}
+
+@media all and (max-width:991px) {
+    .hello-gradient {
+        height:300%;
+        width:300%;
+        top:-75%;
+        left:-75%;
+    }
+}
+
+@media all and (max-width:650px) {
+    .hello-text {
+        left:25px;
+    }
+    .hello-text_row {
+        font-size:36px;
+    }
+    .hello-text_row.is-active::after {
+        height:32px;
+    }
+    .hello-gradient {
+        height:100%;
+        width:100%;
+        top:0;left:0;
+    }
+    .hello-gradient_rotate {
+        animation:none;
+        height:100%;
+        padding:0;
+    }
+    .bottom-link {
+        bottom:5px;
+    }
+}
