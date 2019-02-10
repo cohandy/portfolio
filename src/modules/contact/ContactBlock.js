@@ -31,7 +31,7 @@ class ContactBlock extends React.Component {
                                   <br/><br/>
                                   At AtScale I got to challenge myself and stretch out my dev skills building applications with Node,js, Express.js, and React. I built AtScale’s public website, documentation platform, and worked on their main OLAP cube modeling app. I had a key role in many teams, every day I was faced with new problems to solve and another opportunity to improve my multi-tasking and communication skills. I see myself as a highly flexible developer, able to work with any team and understand the goal of each project. I'm dedicated and am extremely passionate about my work, I see every project or feature as a chance to enhance my knowledge and better myself as a developer and co-worker.
                                   <br/><br/>
-                                  While not at work or researching my next side project, I’m playing whatever video game I’m obsessed with that week, checking out what’s on netlifx, or biking on the bay trail. 
+                                  While not at work or researching my next side project, I’m playing whatever video game I’m obsessed with that week, checking out what’s on netflix, or biking on the bay trail. 
                                 </p>
                                 <div className="contact-col_skills">
                                     <div className="p-block_features_title">Active Skills:</div>
