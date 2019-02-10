@@ -41,9 +41,8 @@ class HelloText extends React.Component {
         this.adjectives = [
             "fullstack",
             "React",
-            "responsive",
             "Node.js",
-            "modern"
+            "professional"
         ];
     }
 

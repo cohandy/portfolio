@@ -1,7 +1,5 @@
 import React from 'react';
-
 import Loading from '../../layouts/Loading.js';
-
 import './project.css';
 
 class ProjectBlock extends React.Component {
@@ -14,7 +12,9 @@ class ProjectBlock extends React.Component {
     }
 
     componentDidMount() {
-        this._video.muted = "true";
+        if (this._video) {
+          this._video.muted = "true";
+        }
     }
 
     handleLoad() {
@@ -96,9 +96,15 @@ class ProjectBlock extends React.Component {
                             </div>
                         </div>
                         <div className="p-block_right">
-                            <video autoPlay loop muted="" playsInline className="p-block_video" ref={(el) => this._video = el}>
+                            {
+                              this.details.video
+                              ?
+                              <video autoPlay loop muted="" playsInline className="p-block_video" ref={(el) => this._video = el}>
                                 <source src={require(`../../assets/${this.details.video}`)}/>
-                            </video>
+                              </video>
+                              :
+                              <img src={require(`../../assets/${this.details.mainImage}`)} className="p-block_video" />
+                            }
                         </div>
                     </div>
                 </div>

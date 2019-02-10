@@ -5,15 +5,23 @@
 
 .contact-col {
     position:absolute;
-    left:0;top:0;
+    left:0;
+    top:0;
     width:50%;
     height:100%;
     background-color:#111111;
     overflow:hidden;
+    display: flex;
+    align-items: center;
+}
+
+.contact-col--full {
+  width: 100%;
 }
 
 .contact-col--right {
-    left:auto;right:0;
+    left:auto;
+    right:0;
     background-color:#001724;
 }
 
@@ -33,7 +41,7 @@
 }
 
 .contact-col_content {
-    padding:100px;
+    padding:200px;
     position: relative;
     z-index:5;
     box-sizing:border-box;
@@ -85,6 +93,11 @@
     color:#FFFFFF;
 }
 
+.contact-col_description--full {
+  max-width: 100%;
+  padding-right: 50px;
+}
+
 .contact-col_description a {
     color:#FFFFFF;
 }
@@ -104,10 +117,7 @@
 }
 
 .contact-options {
-    position:absolute;
-    left:50%;
-    bottom:100px;
-    transform:translateX(-50%);
+    margin-top: 100px;
     text-align:center;
 }
 
