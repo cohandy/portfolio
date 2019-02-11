@@ -8,7 +8,7 @@ class ContactBlock extends React.Component {
         this.state = {
             loading:true
         }
-        this.personalSkills = ["Node.js", "Express.js", "React", "MobX", "CSS/Less", "MongoDB", "MySQL", "Python"];
+        this.personalSkills = ["Javascript", "Node.js", "Express.js", "React", "MobX", "CSS/Less", "MongoDB", "MySQL", "Python"];
         this.workSkills = ["Javascript", "jQuery", "Liquid (Shopify)", "HTML5", "CSS3", "PHP", "MySQL"];
     }
     
